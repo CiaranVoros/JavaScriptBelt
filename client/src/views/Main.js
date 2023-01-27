@@ -9,7 +9,7 @@ const Main = (props) => {
     const [loaded, setLoaded] = useState(false);
 
     useEffect(() => {
-        axios.get('http://localhost:8000/allPets')
+        axios.get('http://localhost:8000/api/allPets')
         .then(res=>{
             setAllPets(res.data);
             setLoaded(true);

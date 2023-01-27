@@ -10,7 +10,7 @@ const ShowOne = (props) => {
     const navigate = useNavigate();
 
     const deletePet = (petId) => {
-        axios.delete('http://localhost:8000/pet/delete/' +petId)
+        axios.delete('http://localhost:8000/api/pet/delete/' +petId)
         .then(res => {
             navigate('/')
         })
@@ -18,7 +18,7 @@ const ShowOne = (props) => {
     }
 
     useEffect(() => {
-        axios.get('http://localhost:8000/pet/' + id)
+        axios.get('http://localhost:8000/api/pet/' + id)
             .then(res => setPet(res.data))
             .catch(err => console.error(err))
     }, [id])

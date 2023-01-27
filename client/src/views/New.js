@@ -15,7 +15,7 @@ export default props => {
 
     const onSubmitHandler = e => {
         e.preventDefault();
-        axios.post('http://localhost:8000/pet/new', {
+        axios.post('http://localhost:8000/api/pet/new', {
             petType,
             name,
             skillOne,

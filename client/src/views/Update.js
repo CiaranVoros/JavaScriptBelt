@@ -16,7 +16,7 @@ const Update = (props) => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        axios.get('http://localhost:8000/pet/' + id)
+        axios.get('http://localhost:8000/api/pet/' + id)
             .then(res => {
                 setPetType(res.data.petType)
                 setDescription(res.data.description)
@@ -29,7 +29,7 @@ const Update = (props) => {
 
     const updatePet = e => {
         e.preventDefault();
-        axios.put('http://localhost:8000/pet/edit/' + id, {
+        axios.put('http://localhost:8000/api/pet/edit/' + id, {
             petType,
             name,
             skillOne,
